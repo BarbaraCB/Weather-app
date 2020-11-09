@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="main-container">
+          <div class="card-body">
+            <form id="city-search">
+              <div class="row">
+                <div class="col-5">
+                  <input
+                    type="search"
+                    id="city"
+                    placeholder="Search city or zipcode"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="col-2">
+                  <input type="submit" value="🔍" class="form-control" />
+                </div>
+                <div class="col-2">
+                  <button
+                    class="btn btn-success w-100"
+                    id="current-location-button"
+                  >
+                    📌
+                  </button>
+                </div>
+
+                <div class="col-5">
+                  <h1>
+                    <span id="temperature"></span>
+                    <span class="units"
+                      ><a href="#" id="celsius-link">°C </a> |
+                      <a href="#" id="fahrenheit-link">°F</a></span
+                    >
+                  </h1>
+                </div>
+              </div>
+            </form>
+
+            <h2>⛅</h2>
+
+            <h3 id="location"></h3>
+            <p id="description"></p>
+            |
+            <p id="humidity">Humidity</p>
+
+            <div class="today">
+              <div class="card">
+                <div class="card-body">
+                  <h4>
+                    Today <br />
+                    <li id="date"></li>
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="previsions">
+              <div class="row">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p>
+                        <li>☁</li>
+                        <li>Sun</li>
+                        <li>Oct 11</li>
+                        <li>58°F/67°F</li>
+                        <li>💧40%</li>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p>
+                        <li><span class="emoji">🌧</span></li>
+                        <li>Mon</li>
+                        <li>Oct 12</li>
+                        <li>59°F/63°F</li>
+                        <li>💧100%</li>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p>
+                        <li>☁</li>
+                        <li>Tue</li>
+                        <li>Oct 13</li>
+                        <li>54°F/70°F</li>
+                        <li>💧20%</li>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p>
+                        <li><span class="emoji">☀</span></li>
+                        <li>Wed</li>
+                        <li>Oct 14</li>
+                        <li>57°F/70°F</li>
+                        <li>💧0%</li>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <p>
+                        <li><span class="emoji">☀</span></li>
+                        <li>Thu</li>
+                        <li>Oct 15</li>
+                        <li>61°F/74°F</li>
+                        <li>💧0%</li>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
